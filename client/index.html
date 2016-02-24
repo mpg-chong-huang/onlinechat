@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>客户端</title>
+	<link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+	<link rel="stylesheet" href="css/app.css">
+	
+	<script src="../bower_components/angular/angular.min.js"></script>
+	<script src="../bower_components/jquery/jquery.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+	<script src="../bower_components/angularfire/angularfire.min.js"></script>
+	<script src="js/app.js"></script>
+	<script src="js/controllers.js"></script>
+</head>
+
+<body>
+
+	<div class="container" ng-controller="ListCtrl" style="padding-top:20px;">
+	
+		<form class="clearfix">
+		
+			<div class="col-xs-2">
+				<div class="row">
+					<input type="text" name="name" ng-model="name" placeholder="请输入您的姓名" class="form-control" required/>
+				</div> 
+			</div>
+			
+			<div class="col-xs-8">
+				<div class="row">
+					<input type="text" name="text" id="text" ng-model="text" placeholder="请输入聊天内容" class="form-control" required/>
+				</div>
+			</div>
+		
+			<div class="col-xs-2">
+				<div class="row">
+					<button class="btn btn-primary" id="button_submit" style="width:100%;">发送</button>
+				</div>
+			</div>
+			
+		</form>
+		<div id="language_selection"  style="margin-top:10px;">
+			<span class="col-xs-12">
+				开始聊天前，请选择您所使用的语言:
+				<select  name="mySelect" id="mySelect" ng-options="option.name for option in data.availableOptions track by option.id" ng-model="data.selectedOption" ng-change="update(data.selectedOption.id)">
+				</select>
+			</span>
+		</div>
+		
+		<ul class="row msg-list" id="text">
+			<li  ng-repeat="msg in messages | orderByPriority">
+				<em style="color: #999">{{msg.name}}</em>
+				:{{msg.text}}
+			</li>
+		</ul>
+		
+	</div>
+
+</body>
+</html>
