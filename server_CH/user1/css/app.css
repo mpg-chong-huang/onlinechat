@@ -1,0 +1,89 @@
+
+body{
+	background:#191919;
+	font-family:Microsoft YaHei;
+}
+
+.main{
+	position:absolute;
+	width:100%;
+	overflow:hidden;
+	min-height: 100%; /* min. height for modern browser */
+    height:auto !important; /* important rule for modern Browser */
+    height:100%; /* min. height for IE */
+    overflow: hidden !important; /* FF scroll-bar */
+}
+
+.side_list{
+	text-align:center;
+	background:#303c4b;
+	width:100%;
+	height:150px;
+	position:relative;
+}
+
+#logo{
+	width:80px;
+}
+
+ul.msg-list{
+	margin:0;
+	padding:0;
+}
+ul.msg-list li{
+	list-style:none;
+	color:#999999;
+}
+
+em.ng-binding {
+	font-style:none;
+	text-transform: uppercase;
+	color:#ffffff;
+}
+
+.silde_li{
+	width:100%;
+	margin:0;
+	padding:0;
+	margin-top:10px;
+	float:left;
+	list-style:none;
+	position:relative;
+	border-radius:3px;
+}
+.silde_li li{
+	color:#428BCA;
+	background:#3E5879;
+	
+}
+.silde_li li:hover, .silde_li li:active,.silde_li li:focus {
+	color:#ffffff;
+	background:#618BC1;
+}
+.msg_con{
+	width:80%;
+	float:left;
+	position:relative;
+	padding:8px;
+}
+.msg_input{
+	position:fixed;
+	bottom:10px;
+}
+	.msg{
+		width:100%;
+	}
+	.submit{
+	}
+
+
+.msg-list li .icon-remove {
+    display: none;
+    margin-left: 10px
+}
+.msg-list-tabs{
+	cursor:pointer;
+}
+.msg-list li:hover .icon-remove {
+    display: inline-block;
+}
