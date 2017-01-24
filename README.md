@@ -11,4 +11,3 @@ change the firebase links to your link and start the server , then open client t
 
 因为是firebase的免费pane所以并发量不是很大
 
-yelo is on the way , thanks all.
